@@ -1,0 +1,792 @@
+/* 
+--- 01 TYPOGRAPHY SYSTEM
+
+- font sizes (px)
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- line heights
+default: 1
+1.05
+1.6
+
+- letter spacing
+ small: -2.5px
+ medium:0.75px
+
+--02 COLORS
+
+-primary:#e67e22
+-Tints: 
+#fdf2e9
+#f8d8bd
+-Shades:
+#cf711f
+#2e1907
+-Accents:
+-Grays
+#aaa
+#888
+#777
+#767676 (lightest gray allowed on #fff)
+#6f6f6f (lightest gray allowed on #fdf2e9)
+#525252
+#555
+#333
+---05 SHADOWS
+
+---06 BORDER-RADIOS
+default: 9px
+
+---07 WHITESPACE
+
+- spacing system (px)
+  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/**************************************/
+/* START HEADER */
+/**************************************/
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdf2e9;
+  /* because we want heade to be sticky later */
+  height: 9.6rem;
+  padding: 0 4.8rem;
+}
+
+/**************************************/
+/* END OF HEADER */
+/**************************************/
+
+/**************************************/
+/* START NAVIGATION */
+/**************************************/
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  gap: 4.8rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.main-nav-link:active,
+.main-nav-link:hover {
+  color: #cf711f;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  color: #fff;
+  background-color: #e67e22;
+  padding: 1.2rem 2.4rem;
+  border-radius: 0.8rem;
+}
+
+.main-nav-link.nav-cta:active,
+.main-nav-link.nav-cta:hover {
+  background-color: #cf711f;
+}
+
+/**************************************/
+/* END OF NAVIGATION */
+/**************************************/
+
+/**************************************/
+/* START HERO SECTION */
+/**************************************/
+
+.section-hero {
+  background-color: #fdf2e9;
+  /*  48 / 64 / 80 / 96 / 128 */
+  padding: 3.2rem 0 9.2rem 0;
+}
+
+.hero {
+  display: grid;
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 8.2rem;
+  align-items: center;
+}
+
+.hero-text-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  align-self: flex-start;
+  /* margin: auto; */
+}
+
+.hero-description {
+  font-size: 2.4rem;
+  line-height: 1.6;
+}
+
+.hero-btn-box {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.hero-img-box {
+  display: flex;
+  padding-bottom: 9.6rem;
+  /* padding-top: 9.2rem; */
+}
+
+.hero-img {
+  align-self: center;
+  width: 100%;
+}
+
+.delivered-meals {
+  display: flex;
+  margin-top: 6.4rem;
+  gap: 1.6rem;
+}
+
+.delivered-imgs {
+  display: flex;
+  margin-right: 2.4rem;
+}
+
+.customer-img {
+  border-radius: 150%;
+  height: 4.8rem;
+  width: 4.8rem;
+  margin-right: -1.6rem;
+  border: 3px solid #fdf2e9;
+}
+
+.customer-img :last-child {
+  margin-right: 0;
+}
+.delivered-text {
+  font-size: 1.8rem;
+  font-weight: 600;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.delivered-text span {
+  color: #cf711f;
+  font-weight: 700;
+}
+
+/**************************************/
+/* END OF HERO SECTION */
+/**************************************/
+
+/**************************************/
+/* START HOW IT WORKS SECTION */
+/**************************************/
+
+.section-how {
+  padding: 9.6px 0;
+  margin-top: 6.4rem;
+  margin-bottom: 6.4rem;
+  /* background-color: orangered; */
+}
+
+.step-number {
+  font-size: 9.8rem;
+  font-weight: 600;
+  color: #ddd;
+  margin-bottom: 1.6rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.step-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.step-img {
+  width: 35%;
+}
+
+.step-img-box::before {
+  content: '';
+  display: block;
+  width: 60%;
+  padding-bottom: 60%;
+  background-color: #fdf2e9;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+}
+
+.step-img-box::after {
+  content: '';
+  display: block;
+  width: 45%;
+  padding-bottom: 45%;
+  background-color: #fae5d3;
+  border-radius: 50%;
+  border: #fff solid 1.4rem;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/**************************************/
+/* END OF HOW IT WORKS SECTION*/
+/**************************************/
+
+/**************************************/
+/* START AS FEATURED IN SECTION */
+/**************************************/
+
+.section-feature {
+  padding: 4.8rem 0;
+}
+
+.heading-featured-in {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #888;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 3.2rem;
+  margin-bottom: 4.2rem;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  margin-bottom: 4.2rem;
+}
+
+.featured-logo {
+  height: 3.4rem;
+  filter: brightness(0);
+  opacity: 50%;
+}
+/**************************************/
+/* END OF AS FEATURED IN SECTION */
+/**************************************/
+
+/**************************************/
+/* START MEALS SECTION */
+/**************************************/
+
+.section-meals {
+  padding: 9.6rem 0;
+  /* margin-top: 6.4rem;
+  margin-bottom: 6.4rem; */
+  /* background-color: rgba(255, 68, 0, 0.35); */
+}
+.meal {
+  /* margin-left: 2.4rem; */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  transition: all 0.4s;
+}
+
+.meal:hover {
+  cursor: pointer;
+  transform: translateY(-2rem);
+  box-shadow: 0 2rem 30px rgba(0, 0, 0, 0.1);
+}
+
+.meal-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  margin-bottom: 2.4rem;
+}
+
+.meal-img {
+  width: 100%;
+  /* margin-bottom: 2.4rem; */
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+}
+
+.card-content {
+  padding: 4.8rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: #40c057;
+  border-radius: 20px;
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 1rem;
+  /* margin-left: 4.8rem; */
+}
+
+.meal-attributes {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  list-style: none;
+  gap: 2rem;
+  /* padding: 0 2.4rem; */
+  /* margin-left: 2.4rem; */
+  /* margin-bottom: 4.8rem; */
+}
+
+.meal-attribute {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.meal-icon {
+  margin-right: 1.4rem;
+  color: #cf711f;
+  font-size: 2.4rem;
+}
+
+.heading-list {
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 3.4rem;
+}
+
+.meal-icon {
+  font-size: 3rem;
+}
+
+.tag:nth-child(2) {
+  background-color: #ffd43b;
+}
+
+.all-recipes {
+  font-size: 1.8rem;
+}
+
+.link:link,
+.link:visited {
+  color: #e67e22;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  font-weight: 500;
+  padding-bottom: 2px;
+}
+
+.link:hover,
+.link:active {
+  color: #cf711f;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s;
+}
+/**************************************/
+/* ENF OF MEALS SECTION */
+/**************************************/
+
+/**************************************/
+/* START TESTIMONIALS SECTION */
+/**************************************/
+
+.section-testimonials {
+  background-color: #fae5d3;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+}
+
+.testimonial-container {
+  padding: 9.6rem;
+  align-self: start;
+}
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4.8rem;
+}
+
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+}
+
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin-bottom: 1.6rem;
+}
+.testimonial-name {
+  font-size: 1.4rem;
+  color: #525252;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+/**************************************/
+/* END OF TESTIMONIALS SECTION */
+/**************************************/
+
+/**************************************/
+/* START PRICING SECTION */
+/**************************************/
+
+.section-pricing {
+  padding: 9.6rem;
+}
+
+.pricing-plan {
+  border: 3px solid #fdf2e9;
+  border-radius: 11px;
+  padding: 4.8rem;
+  width: 75%;
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+  /* margin-top: ; */
+}
+
+.pricing-plan--starter {
+  background-color: #fff;
+  justify-self: end;
+}
+
+.pricing-plan--complete {
+  background-color: #fdf2e9;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-plan--complete::after {
+  content: 'Best value';
+  position: absolute;
+  top: 6%;
+  right: -9%;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background-color: #ffd43b;
+  color: #333;
+  padding: 0.8rem 5rem;
+  transform: rotate(45deg);
+}
+
+.plan-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.75;
+  color: #cf711f;
+  margin-bottom: 3.2rem;
+}
+
+.plan-price {
+  font-size: 6.2rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 2.4rem;
+}
+
+.plan-price span {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.plan-text {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #888;
+  /* margin-bottom: 4rem; */
+}
+
+.plan-sign-up {
+  margin-top: 4.8rem;
+  text-align: center;
+}
+
+.plan-details {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/**************************************/
+/* ENF OF PRICING SECTION */
+/**************************************/
+
+/**************************************/
+/* START FEATURE SECTION */
+/**************************************/
+
+.feature-section {
+  grid-column: 1/-1;
+}
+
+.feature-icon {
+  color: #e67e22;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-bottom: 3.2rem;
+  background-color: #fdf2e9;
+  padding: 1.6rem;
+  border-radius: 50%;
+}
+
+.feature-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.8rem;
+}
+
+.feature-text {
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+
+/**************************************/
+/* END OF FEATURE SECTION */
+/**************************************/
+
+/**************************************/
+/* START CTA SECTION */
+/**************************************/
+.section-cta {
+  padding: 4.8rem 0 12.8rem;
+}
+
+.cta {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  /* background-color: #cf711f; */
+  border-radius: 11px;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+  background-image: linear-gradient(to left top, #e67e22, #e79650);
+
+  /* TEMP */
+  /* height: 50rem; */
+}
+
+.cta-text-box {
+  color: #2e1907;
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+
+.cta-text-box .heading-secondary {
+  /* color: #2e1907; */
+  color: inherit;
+  margin-bottom: 3.2rem;
+  font-size: 4.8rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(230, 125, 34, 0.25),
+      rgba(235, 151, 78, 0.25)
+    ),
+    url('../img/eating.jpg');
+  background-size: cover;
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 3.2rem;
+  grid-row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  border: none;
+  stroke: none;
+  border-radius: 9px;
+  color: inherit;
+  background-color: #fdf2e9;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cta-form input::placeholder {
+  color: #aaa;
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+
+/**************************************/
+/* ENF OF CTA SECTION */
+/**************************************/
+
+/**************************************/
+/* START FOOTER SECTION */
+/**************************************/
+.footer {
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
+}
+
+.grid-footer {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  display: block;
+
+  /* margin-bottom: 3.2rem; */
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+  /* align-items: center; */
+  justify-content: flex-start;
+  /* margin-bottom: 2.4rem; */
+}
+
+.social-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #767676;
+  /* text-align: center; */
+  /* margin-top: auto; */
+}
+
+.footer-heading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 3.2rem;
+}
+
+.footer-nav {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #767676;
+  transition: all 0.3s;
+}
+
+.footer-link:active,
+.footer-link:hover {
+  color: #444;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  font-style: normal;
+  line-height: 1.6;
+  gap: 3.6rem;
+}
+
+.address-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* margin-bottom: 2.4rem; */
+}
+
+.contacts p:last-child {
+  /* background-color: #40c057; */
+  padding-top: auto;
+}
+/**************************************/
+/* END WEB APPLICATION */
+/**************************************/
